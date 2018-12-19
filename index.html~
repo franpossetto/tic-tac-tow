@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>TicTacToe</title>
+        <link rel = "stylesheet" href="css/normalize.css">
+        <link rel = "stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        
+        <script src = "js/modernizr-custom.js"></script>
+        
+    </head>
+
+    <body>
+        <div id = "content">
+            <div id = "game">
+                <div id = "title">
+                    <h1>BigBagBoy</h1>
+                </div>
+                <div id = "content-board">
+                    <div id = "board">
+                        <div class = "rows">
+                            <div class = "row">
+                                <div id = "c02" class = "cell" onClick = "checkCell(0,2)"></div>
+                                <div id = "c12" class = "cell" onClick = "checkCell(1,2)"></div>
+                                <div id = "c22" class = "cell" onClick = "checkCell(2,2)"></div>
+                            </div>
+                             <div class = "row">
+                                <div id = "c01" class = "cell" onClick = "checkCell(0,1)"></div>
+                                <div id = "c11" class = "cell" onClick = "checkCell(1,1)"></div>
+                                <div id = "c21" class = "cell" onClick = "checkCell(2,1)"></div>
+                            </div>
+                             <div class = "row">
+                                <div id = "c00" class = "cell" onClick = "checkCell(0,0)"></div>
+                                <div id = "c10" class = "cell" onClick = "checkCell(1,0)"></div>
+                                <div id = "c20" class = "cell" onClick = "checkCell(2,0)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src = "js/smart.js"></script>
+        <script src = "js/checkManager.js"></script>
+        <script src = "js/autoplay.js"></script>
+    </body>
+
+</html>

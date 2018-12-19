@@ -1,0 +1,91 @@
+var board = new Array(3);
+var turn;
+
+var crossSelected_x;
+var crossSelected_y;
+
+var ballSelected_x;
+var ballSelected_y;
+
+function clearCell (x, y){
+     board[x][y] = 0;
+     cell = document.getElementById("c" + x + y);
+     cell.innerHTML = "";
+}
+
+function paintCell(x, y){
+    cell = document.getElementById("c" + x + y);
+    cell.innerHTML = "<div class=" + turn + "></div>";
+
+    if (turn == "ball") {
+        board[x][y] = 1;
+        ballSelected_x= x;
+        ballSelected_y= y;
+    }
+    else {
+        board[x][y] = 2;
+        crossSelected_x= x;
+        crossSelected_y= y;
+    }
+
+    checkLine();
+    
+    if (turn == "ball") turn = "cross";
+    else turn = "ball";
+}
+
+function clearBoard(){
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++){
+           clearCell(i, j);
+        }
+}
+
+function checkCell(x, y){
+    crosses = checkTurn_Count(2);
+    if (crosses == 3){
+        if (board[x][y] == 2){
+            crossSelected_x= x;
+            crossSelected_y= y;
+            clearCell(x, y);
+        }
+    }
+    else{
+        if(board[x][y] == 0 && difMov(x, y)) selectCell(x, y);
+    }
+}
+
+function selectCell(x, y){
+paintCell(x,y);
+searchMove();
+}
+
+function autoplay(){
+    for(i=0; i<3; i++) board[i] = new Array(3);
+
+    turn = "ball";
+
+    crossSelected_x= 4;
+    crossSelected_y= 4;
+
+    ballSelected_x= 4;
+    ballSelected_y=4;
+    
+    clearBoard();
+    searchMove();
+}
+
+
+autoplay();
+
+/* 
+
+Vacia = 0
+Ball = 1
+Cross = 2
+
+turn:
+ball = maquina
+cross = humano
+
+*/

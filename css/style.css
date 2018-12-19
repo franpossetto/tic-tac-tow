@@ -1,0 +1,109 @@
+body {
+    font-family: 'Poiret One', cursive;
+    font-size: 18px;
+    background-color: #673AB7;
+    color: #FFFFFF
+}
+
+#content  {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#game {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#game h1 {
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#content-board {
+    text-align: center;
+}
+
+#board {
+    width: auto;
+    position: relative;
+    padding: 3px 0px 0px 3px;
+}
+
+#board .rows {
+    width: 100%;
+    padding: 0px;
+}
+
+#board .row .cell {
+    padding: 0px;
+    margin: -3px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+
+#board .row .cell .ball{
+    top:18%;
+    left: 18%;
+    width: 50%;
+    height: 50%;
+    border: 8px solid #212121;
+    border-radius: 100%;
+    position: absolute;
+}
+
+#board .row .cell .cross{
+    top:18%;
+    left: 18%;
+    width: 50%;
+    height: 50%;
+    border: 8px solid #FFFFFF;
+    border-radius: 100%;
+    position: absolute;
+}
+
+
+#board .row #c02 {
+    border-right: 8px solid #512DA8;
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c12 {
+    border-right: 8px solid #512DA8;
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c22 {
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c01 {
+    border-right: 8px solid #512DA8;
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c11 {
+    border-right: 8px solid #512DA8;
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c21 {
+    border-bottom: 8px solid #512DA8;
+}
+
+#board .row #c00 {
+    border-right: 8px solid #512DA8;
+}
+
+#board .row #c10 {
+    border-right: 8px solid #512DA8;
+}
+
+#board .row #c20 {
+   
+}

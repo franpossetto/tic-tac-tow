@@ -1,0 +1,11 @@
+function searchMove(){
+    cellAvailable = false;
+    
+    while (cellAvailable == false){
+        x = Math.round(Math.random()*2);
+        y = Math.round(Math.random()*2);
+
+        if (board[x][y] == 0) cellAvailable = true;
+    }
+    paintCell(x, y);
+}

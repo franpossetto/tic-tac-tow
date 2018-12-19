@@ -1,0 +1,22 @@
+function checkTurn_Count(turn_value){
+    turn_count = 0;
+    for(i=0; i<3; i++){
+        for (j=0; j<3; j++){
+            if (board[i][j] == turn_value) turn_count++;
+        }
+    }
+    return turn_count;
+}
+
+function difMovx(x, y){
+    diferent = false;
+    if (turn == "cross"){
+        if (x!=crossSelected_x) diferent = true;
+        if (y!=crossSelected_y) diferent = true;
+    }
+    else {
+    if (x!=ballSelected_x) diferent = true;
+    if (y!=ballSelected_y) diferent = true;
+    }
+    return diferent;
+}
